@@ -1,0 +1,60 @@
+@import '../../../assets/styles/vars.scss';
+
+.footer {
+  grid-area: footer;
+  display: inline-flex;
+  align-items: center;
+  padding-right: 16px;
+  padding-left: 16px;
+  background-color: $light-grey;
+  &_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_text {
+    font-size: 12px;
+    color: $dark-grey;
+    padding-left: 24px;
+    margin-left: 24px;
+    border-left: 1px solid $dark-grey;
+    &_low {
+      font-size: 12px;
+      color: $dark-grey;
+      margin-bottom: 0;
+      margin-top: 12px;
+    }
+  }
+}
+
+.logo {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    padding-right: 24px;
+    padding-left: 24px;
+    &_wrap {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .footer {
+    &_text {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .footer {
+    &_wrap {
+      flex-direction: column;
+    }
+  }
+}

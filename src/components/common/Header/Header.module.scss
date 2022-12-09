@@ -1,0 +1,89 @@
+@import '../../../assets/styles/vars.scss';
+
+.header {
+  grid-area: header;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  padding-right: 16px;
+  padding-left: 16px;
+  &_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_logo {
+    margin-right: 92px;
+    height: 20px;
+  }
+  &_link {
+    display: inline-flex;
+    margin-right: 46px;
+    height: 36px;
+    align-items: center;
+    margin-left: 93px;
+    padding-right: 26px;
+    padding-left: 26px;
+    font-size: 14px;
+    background-color: $yellow-color;
+    border-radius: 4px;
+    color: $black;
+    transition: ease-in-out 0.4s;
+    &:hover {
+      color: $black;
+      background-color: rgb(245, 183, 91);
+    }
+  }
+}
+
+.logo {
+  display: block;
+}
+
+.toggle {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    width: 100%;
+    padding-right: 24px;
+    padding-left: 24px;
+    &_link {
+      margin-left: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 894px) {
+  .header {
+    &_link {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 864px) {
+  .header {
+    &_link {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 694px) {
+  .header {
+    &_logo {
+      margin-right: 29px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    &_logo {
+      margin-right: 19px;
+    }
+  }
+}

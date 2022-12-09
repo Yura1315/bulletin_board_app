@@ -1,16 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
+// import { Route, Routes } from 'react-router-dom';
+import PageWrapper from './components/common/PageWrapper';
+import MainContainer from './containers/MainContainer';
 
 const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Edit</p>
-      <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-        Learn React
-      </a>
-    </header>
-  </div>
+  <Routes>
+    <Route path="/" element={<PageWrapper />}>
+      <Route index element={<MainContainer />} />
+    </Route>
+  </Routes>
 );
 
 export default App;
